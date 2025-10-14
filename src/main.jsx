@@ -2,11 +2,11 @@ import { createContext } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter } from 'react-router'
 import { RouterProvider } from 'react-router'
-import {welcome} from './components/welcome/welcome.jsx'
-import login from './components/login/login.jsx'
+import {welcome} from './components/welcome/welcome.jsx' 
+import login from './components/Login/login.jsx'
 import { store } from '../util/createStore.jsx'
-import home from './components/home/home.jsx'
-import dashboard from './components/dashboard/dashboard.jsx'
+import home from './components/Home/home.jsx'
+import dashboard from './components/Dashboard/dashboard.jsx'
 
 
 export let myValue = createContext("hello  world from context api value");
