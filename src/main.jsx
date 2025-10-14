@@ -1,11 +1,10 @@
-import { createContext, StrictMode } from 'react'
+import { createContext } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter } from 'react-router'
 import { RouterProvider } from 'react-router'
 import welcome from './components/welcome/welcome.jsx'
 import login from './components/login/login.jsx'
 import { store } from '../util/createStore.jsx'
-import { provider } from 'react-redux'
 import home from './components/home/home.jsx'
 import dashboard from './components/dashboard/dashboard.jsx'
 
