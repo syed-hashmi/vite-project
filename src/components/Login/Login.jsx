@@ -1,14 +1,16 @@
 import "./Login.css";
 import { useState } from "react";
-import { useAuth } from "../../authContext/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { AuthProvider } from "../../authContext/AuthContext";
- 
+import api from "../../api/axitInstance.js";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../../util/createSlice.jsx";    
 
 export default function Login() {
-    const { login } = useAuth();
+    const dispatch = useDispatch();
+
     const [formData, setFormData] = useState({ email: "", password: "" });
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
+
 
     // const UserContext = createContext(false);
 
@@ -17,33 +19,16 @@ export default function Login() {
         setFormData(prev => ({ ...prev, [id]: value }));
     }
 
-    // function handleSubmit(e) {
-    //     debugger;
-    //     e.preventDefault();
-    //     // Use email and password as needed  
-    //     axios.post("http://localhost:2000/api/auth/login",
-    //         {
-    //             username: formData.username,
-    //             password: formData.password,
-    //         }
-    //         , { withCredentials: true }) // if you need cookies
-    //         .then(res => {
-    //             debugger;
-    //             // UserContext.Provider.value = true;
-    //             console.log(res.data)
-    //         })
-    //         .catch(err => console.error(err));
-    // }
-
     const handleSubmit = async (e) => {
+        debugger;
         e.preventDefault();
         try {
-            await login(formData.username, formData.password);
-            alert("Logged in!");
+            let user = await api.post("/auth/login", { username: formData.username, password: formData.password });
+            dispatch(setUser(user.data)); // ✅ store user in redux
+
             navigate("/dashboard"); // ✅ redirect to dashboard (home)
 
         } catch (err) {
-            alert("Login failed");
         }
     };
 

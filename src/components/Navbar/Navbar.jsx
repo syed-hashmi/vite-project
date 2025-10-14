@@ -1,28 +1,33 @@
+import { useDispatch } from "react-redux";
 import "./Navbar.css";
-import { Link } from "react-router";
-
+import { clearUser } from "../../../util/createSlice.jsx";
+import { Link, useNavigate } from "react-router";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+    const navigate = useNavigate();
+    const userData = useSelector((state) => state.user);
+
+    let dispatch = useDispatch();
+    let logout = () => {
+        dispatch(clearUser());
+        navigate("/login");
+    }
     return (
         <>
             <nav className="navbar">
                 <div className="logo">MediTrack</div>
                 <ul className="nav-links">
-                    <li><a href="#">Home</a></li>
+                   <Link to="home"><li>Home</li></Link>
                     <li><a href="#">Inventory</a></li>
                     <li><a href="#">Reports</a></li>
                     <li><a href="#">Settings</a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><a onClick={() => {
+                        logout();
+                    }}>Logout</a></li>
                 </ul>
             </nav>
-            <div className="overlay">
-                <div className="welcome-card">
-                    <h1>Welcome to</h1>
-                    <h2>Medicine Inventory System</h2>
-                    <p>Your smart companion in managing medical supplies</p>
-                    <a href="dashboard.html" className="enter-btn">Enter Dashboard</a>
-                </div>
-            </div>
+
         </>
     );
 };
