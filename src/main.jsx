@@ -6,8 +6,8 @@ import Welcome from './components/welcome/welcome.jsx'
 import Login from './components/login/login.jsx'
 import { store } from '../util/createStore.jsx'
 import { Provider } from 'react-redux'
-import Home from './components/home/Home.jsx'
-import Dashboard from './components/dashboard/Dashboard.jsx'
+import Home from './components/home/home.jsx'
+import Dashboard from './components/dashboard/dashboard.jsx'
 
 
 export let myValue = createContext("hello  world from context api value");
