@@ -7,7 +7,7 @@ import Welcome from './components/welcome/welcome.jsx'
 import Login from './components/login/login.jsx'
 import { store } from '../util/createStore.jsx'
 import { Provider } from 'react-redux'
-import Home from './components/Home/Home.jsx'
+import Home from './components/home/Home.jsx'
 import { useContext } from 'react'
 
 
