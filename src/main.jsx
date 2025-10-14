@@ -2,12 +2,12 @@ import { createContext, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter } from 'react-router'
 import { RouterProvider } from 'react-router'
-import Welcome from './components/welcome/welcome.jsx'
-import Login from './components/login/login.jsx'
+import welcome from './components/welcome/welcome.jsx'
+import login from './components/login/login.jsx'
 import { store } from '../util/createStore.jsx'
-import { Provider } from 'react-redux'
-import Home from './components/home/home.jsx'
-import Dashboard from './components/dashboard/dashboard.jsx'
+import { provider } from 'react-redux'
+import home from './components/home/home.jsx'
+import dashboard from './components/dashboard/dashboard.jsx'
 
 
 export let myValue = createContext("hello  world from context api value");
@@ -15,22 +15,22 @@ export let myValue = createContext("hello  world from context api value");
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: Welcome
+    Component: welcome
   },
   {
     path: "/dashboard",
-    Component: Dashboard,
+    Component: dashboard,
     children: [
       {
         path: "home",
-        Component: Home
+        Component: home
       }
     ]
 
   },
   {
     path: "/login",
-    Component: Login,
+    Component: login,
   },
 ])
 

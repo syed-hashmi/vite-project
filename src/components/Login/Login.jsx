@@ -5,7 +5,7 @@ import api from "../../api/axitInstance.js";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../../util/createSlice.jsx";    
 
-export default function Login() {
+export default function login() {
     const dispatch = useDispatch();
 
     const [formData, setFormData] = useState({ email: "", password: "" });
