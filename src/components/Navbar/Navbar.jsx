@@ -4,7 +4,7 @@ import { clearUser } from "../../../util/createSlice.jsx";
 import { Link, useNavigate } from "react-router";
 import { useSelector } from "react-redux";
 
-const navbar = () => {
+export const navbar = () => {
     const navigate = useNavigate();
     const userData = useSelector((state) => state.user);
 

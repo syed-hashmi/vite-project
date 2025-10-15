@@ -5,7 +5,6 @@ import { Outlet, useNavigate } from "react-router";
 import { clearUser } from "../../../util/createSlice.jsx";
 
 import api from "../../api/axitInstance.js";
-import navbar from "../navbar/navbar.js";
 import { useContext, useEffect } from "react";
 import {myValue} from '../../main.jsx';
 
