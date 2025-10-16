@@ -1,6 +1,6 @@
 
 import { useDispatch, useSelector } from "react-redux";
-import "./Dashboard.css"
+import "./dashboard.css"
 import { Outlet, useNavigate } from "react-router";
 import { clearUser } from "../../../util/createSlice.jsx";
 
