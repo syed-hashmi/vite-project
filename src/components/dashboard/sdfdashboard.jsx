@@ -14,7 +14,7 @@ export default function Dashboard() {
   let user = useSelector((state) => state.user);
   let navigate = useNavigate();
   useEffect(() => {
-    debugger;
+    debugger;//asdf
     if (!user) {
       const fetchData = async () => {
         try {

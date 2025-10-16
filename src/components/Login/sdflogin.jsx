@@ -1,11 +1,11 @@
-import "./Login.css";
+import "./login.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../../api/axitInstance.js";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../../util/createSlice.jsx";    
 
-export default function login() {
+export function login() {
     const dispatch = useDispatch();
 
     const [formData, setFormData] = useState({ email: "", password: "" });
