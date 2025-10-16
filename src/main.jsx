@@ -5,8 +5,8 @@ import { RouterProvider } from 'react-router'
 import {welcome} from './components/welcome/welcome.jsx' 
 import {login} from './components/login/sdflogin.jsx'
 import { store } from '../util/createStore.jsx'
-import home from './components/Home/home.jsx'
-import dashboard from './components/dashboard/sdfdashboard.jsx'
+import home from './components/home/home.js'
+import dashboard from './components/dashboard/dashboard.jsx'
 
 
 export let myValue = createContext("hello  world from context api value");
