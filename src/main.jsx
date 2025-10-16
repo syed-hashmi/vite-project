@@ -5,7 +5,7 @@ import { RouterProvider } from 'react-router'
 import {welcome} from './components/welcome/welcome.jsx' 
 import {login} from './components/login/login.jsx'
 import { store } from '../util/createStore.jsx'
-import home from './components/home/home.js'
+import {home} from './components/home/home.js'
 import dashboard from './components/dashboard/dashboard.jsx'
 
 
