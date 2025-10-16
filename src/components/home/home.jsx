@@ -3,7 +3,7 @@ import React, { use } from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router';
 import { Navigate } from 'react-router-dom'
-export default function home() {
+export function home() {
   let user = useSelector((state) => state.user);
   let navigate = useNavigate()
   return (
