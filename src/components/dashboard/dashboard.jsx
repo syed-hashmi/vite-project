@@ -6,15 +6,13 @@ import { clearUser } from "../../../util/createSlice.jsx";
 
 import api from "../../api/axitInstance.js";
 import { useContext, useEffect } from "react";
-import {myValue} from '../../main.jsx';
-
+import {Navbar} from "../navbar/navbar.jsx";
+ 
 export default function Dashboard() {
 
-  let pp = useContext(myValue);
   let user = useSelector((state) => state.user);
   let navigate = useNavigate();
   useEffect(() => {
-    debugger;//asdf
     if (!user) {
       const fetchData = async () => {
         try {
@@ -34,10 +32,7 @@ export default function Dashboard() {
   return (
     <>
       <Navbar />
-      <div>{pp}</div>
       <div className="background">
-        <div>This is dashboard</div>
-        <br></br>
         <Outlet></Outlet>
       </div>
     </>

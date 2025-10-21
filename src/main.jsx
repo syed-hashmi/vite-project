@@ -1,15 +1,19 @@
-import { createContext } from 'react'
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
+
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter } from 'react-router'
 import { RouterProvider } from 'react-router'
-import {welcome} from './components/welcome/welcome.jsx' 
-import {login} from './components/login/login.jsx'
+import { welcome } from './components/welcome/welcome.jsx'
+import { login } from './components/login/login.jsx'
 import { store } from '../util/createStore.jsx'
-import {home} from './components/home/home.jsx'
-import dashboard from './components/dashboard/dashboard.jsx' 
+import { home } from './components/home/home.jsx'
+import dashboard from './components/dashboard/dashboard.jsx'
 import { Provider } from 'react-redux'
-
-export let myValue = createContext("hello  world from context api value");
+import { AddMedicine } from './components/AddMedicine/addMedicine.jsx'
 
 const router = createBrowserRouter([
   {
@@ -23,7 +27,11 @@ const router = createBrowserRouter([
       {
         path: "home",
         Component: home
-      } 
+      },
+      {
+        path: "addMedicine",
+        Component: AddMedicine
+      }
     ]
 
   },
@@ -33,10 +41,8 @@ const router = createBrowserRouter([
   },
 ])
 
-createRoot(document.getElementById('root')).render( 
-  <myValue.Provider value={"hello from context api"}>
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
-  </myValue.Provider> 
+createRoot(document.getElementById('root')).render(
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
 )

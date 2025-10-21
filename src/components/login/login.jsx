@@ -20,7 +20,6 @@ export function login() {
     }
 
     const handleSubmit = async (e) => {
-        debugger;
         e.preventDefault();
         try {
             let user = await api.post("/auth/login", { username: formData.username, password: formData.password });

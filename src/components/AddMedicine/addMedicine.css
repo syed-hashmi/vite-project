@@ -1,0 +1,101 @@
+.add-medicine-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 20px;
+ }
+
+.flexItem {
+  margin-bottom: 20px;
+  color: #00ffe1 !important;
+  border-color: #00ffe1 !important;
+  width: 300px !important;
+}
+
+.flexItemBtn {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+  margin-bottom: 20px;
+  color: #00ffe1 !important;
+  border-color: #00ffe1 !important;
+  width: 300px;
+}
+
+.btnColor {
+  color: #00ffe1 !important;
+  border-color: #00ffe1 !important;
+}
+
+
+
+/* .custom-textfield label {
+  color:#00ffe1 !important;
+}
+
+.custom-textfield label.Mui-focused {
+  color:#00ffe1 !important;/* label color on focus  
+}
+
+.custom-textfield .MuiOutlinedInput-root fieldset {
+  border-color: #00ffe1 !important;
+}
+
+.custom-textfield .MuiOutlinedInput-root:hover fieldset {
+  border-color: #00ffe1 !important;
+}
+
+.custom-textfield .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #00ffe1 !important;
+}
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+.css-vycme6-MuiPickersInputBase-root-MuiPickersOutlinedInput-root.Mui-focused:not(.Mui-error) .MuiPickersOutlinedInput-notchedOutline {
+  border-color: #00ffe1 !important;
+}
+
+
+.css-vycme6-MuiPickersInputBase-root-MuiPickersOutlinedInput-root:not(.Mui-error) .MuiPickersOutlinedInput-notchedOutline {
+  border-color: #00ffe1 !important;
+}
+
+  */
+ .errorColor{
+  color: red;
+ }
+
+
+
+
+ .medicineGridAndFrom{
+  display: flex;
+  gap: 50px;
+  margin-top: 100px;
+  margin-left: 50px;  
+ }
+
+
+ .MuiTablePagination-selectLabel {
+  margin-bottom: 0px !important;
+ }
+
+ .MuiTablePagination-displayedRows {
+  margin-bottom: 0px !important;
+ }
+
+ .tableAndSearch{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+ }

@@ -5,7 +5,6 @@ const slice = createSlice({
     initialState:null,
     reducers:{
         setUser:(state,action)=>{
-            debugger;
             return action.payload
         },
         clearUser:()=>{
