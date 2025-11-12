@@ -8,7 +8,7 @@ export function welcome() {
         navigate("/login"); 
     }
     return (
-        <div className="background">
+        <div className="background alignWelcome">
             <div className="overlay">
                 <div className="welcome-card">
                     <h1>Welcome to</h1>

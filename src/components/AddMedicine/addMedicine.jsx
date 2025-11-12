@@ -95,14 +95,15 @@ export function AddMedicine() {
   }, []);
 
   // const handleClick = (name) => {
-  //   console.log("caleldFRomChild " + name);
-  // }
-
-  const searchMedicines = () => {
-    console.log("searchMedicines Called");
-  }
-  const displayedRows = tableData?.data?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
-
+    //   console.log("caleldFRomChild " + name);
+    // }
+    
+    const searchMedicines = () => {
+      console.log("searchMedicines Called");
+    }
+    const displayedRows = tableData?.data?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
+    
+    debugger;
   return (
     <div className='medicineGridAndFrom'>
       {/* <div>
@@ -204,10 +205,9 @@ export function AddMedicine() {
               </TableHead>
               <TableBody>
                 {
-
                   displayedRows?.map((row) => (
-                    <TableRow
-                      key={row.name}
+                     <TableRow
+                      key={row?.medicineName}
                       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
                       <TableCell component="th" scope="row">
